@@ -28,6 +28,7 @@ dependencies {
 	testImplementation("org.junit.jupiter:junit-jupiter-api")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 	testImplementation("com.ninja-squad:springmockk:4.0.0")
+	implementation("org.telegram:telegrambots:6.5.0")
 }
 
 tasks.withType<KotlinCompile> {
