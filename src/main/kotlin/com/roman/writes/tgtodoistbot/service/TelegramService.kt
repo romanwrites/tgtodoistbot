@@ -11,6 +11,6 @@ class TelegramService {
     val log: Logger = LoggerFactory.getLogger(TelegramService::class.java)
 
     fun update(message: Message) {
-        log.info("add logger")
+        log.info(message.toString())
     }
 }
