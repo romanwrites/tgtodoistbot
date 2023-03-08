@@ -2,7 +2,6 @@ package com.roman.writes.tgtodoistbot.controller
 
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.databind.PropertyNamingStrategies
-import com.fasterxml.jackson.databind.PropertyNamingStrategy
 import org.assertj.core.api.Assertions.assertThat
 import org.junit.jupiter.api.Test
 import org.springframework.beans.factory.annotation.Autowired
@@ -39,7 +38,6 @@ class TelegramControllerTest(@Autowired val restTemplate: TestRestTemplate) {
         }
         """.trimIndent()
 
-        val objectMapper = ObjectMapper().setPropertyNamingStrategy(PropertyNamingStrategy.SNAKE_CASE)
         val message = objectMapper.readValue(request, Message::class.java)
         val response = restTemplate.postForEntity(
             "/telegram/update",
