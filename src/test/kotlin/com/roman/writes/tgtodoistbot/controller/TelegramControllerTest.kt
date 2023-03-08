@@ -42,7 +42,7 @@ class TelegramControllerTest(@Autowired val restTemplate: TestRestTemplate) {
         val response = restTemplate.postForEntity(
             "/telegram/update",
             message,
-            ResponseEntity::class.java
+            String::class.java
         )
         assertThat(response.statusCode).isEqualTo(HttpStatus.OK)
     }
