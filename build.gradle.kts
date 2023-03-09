@@ -28,6 +28,10 @@ dependencies {
 	testImplementation("org.junit.jupiter:junit-jupiter-api")
 	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 	testImplementation("com.ninja-squad:springmockk:4.0.0")
+	implementation("org.telegram:telegrambots:6.5.0")
+
+	implementation("org.slf4j:slf4j-api:2.0.6")
+	implementation("org.apache.logging.log4j:log4j-core:2.20.0")
 }
 
 tasks.withType<KotlinCompile> {
